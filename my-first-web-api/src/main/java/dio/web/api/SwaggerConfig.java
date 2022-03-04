@@ -18,6 +18,11 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
-    //...INSIRA OS CÓDIGOS ABAIXO
+    private Contact contato() {
+        return new Contact(
+                "Seu nome",
+                "http://www.seusite.com.br",
+                "voce@seusite.com.br");
+    }
 
 }
