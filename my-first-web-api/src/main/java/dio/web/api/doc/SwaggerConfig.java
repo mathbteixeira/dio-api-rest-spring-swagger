@@ -1,4 +1,4 @@
-package dio.web.api;
+package dio.web.api.doc;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -45,7 +45,7 @@ public class SwaggerConfig {
 
         docket
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("pacote.comseus.controllers"))
+                .apis(RequestHandlerSelectors.basePackage("dio.web.api.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(this.informacoesApi().build())
