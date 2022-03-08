@@ -1,4 +1,4 @@
-package dio.web.api.doc;
+package dio.web.api;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -17,15 +17,14 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
-
     private Contact contato() {
         return new Contact(
                 "Seu nome",
                 "http://www.seusite.com.br",
                 "voce@seusite.com.br");
     }
-
     private ApiInfoBuilder informacoesApi() {
+
         ApiInfoBuilder apiInfoBuilder = new ApiInfoBuilder();
 
         apiInfoBuilder.title("Title - Rest API");
@@ -37,6 +36,7 @@ public class SwaggerConfig {
         apiInfoBuilder.contact(this.contato());
 
         return apiInfoBuilder;
+
     }
 
     @Bean
